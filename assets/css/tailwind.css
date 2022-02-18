@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.overlay-white{
+    @apply absolute w-full h-full bg-white top-0 z-10 opacity-20;
+}
+
+.is-loading {
+  color: transparent!important;
+  pointer-events: none;
+}
+
+.is-loading::after {
+  border: 2px solid #fff;
+  border-radius: 9999px;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  height: 1em;
+  width: 1em;
+  left: calc(50% - (1em * .5));
+  top: calc(50% - (1em * .5));
+  position: absolute!important;
+  @apply animate-spin font-semibold;
+}
+
+#main-nav .nuxt-link-exact-active{
+  @apply text-green;
+}
+
+#admin-nav .nuxt-link-exact-active,#admin-nav a:hover {
+  @apply bg-gray-100/90 rounded;
+}
+
+.page-header-button{
+  @apply block font-semibold  bg-green rounded text-white px-5 py-2 hover:bg-green/50
+}
+
+#admin .card{
+  background-color: #fcfdfd;
+  border-color: #eff2f5;
+  @apply border rounded-lg;
+}
+
+#admin .card-body{
+  @apply p-6;
+}
+
+#admin .card .card-header .card-title{
+  font-size: 1.35rem;
+  @apply font-semibold;
+}
+
+#admin .card .card-header{
+  @apply flex items-center justify-between px-6 min-h-[70px] border-b border-[#eff2f5]
+}
+
+#admin .card .card-footer{
+  @apply border-t border-[#eff2f5] py-6 px-8 flex justify-end
+}
+
+/*.input {
+  display: block;
+  width: 100%;
+  padding: .75rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #181c32;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #e4e6ef;
+  appearance: none;
+  border-radius: .475rem;
+  box-shadow: none;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}*/
+
+.input-solid {
+  background-color: #f5f8fa;
+  border-color: #f5f8fa;
+  color: #5e6278;
+  transition: color .2s ease, background-color .2s ease;
+}
+
+.input-solid::placeholder,select option:disabled{
+  color: #a1a5b7 !important;
+}
+
+/*.input.input-solid.active, .input.input-solid.focus, .input.input-solid:active, .input.input-solid:focus {
+  background-color: #eef3f7;
+  border-color: #eef3f7;
+  color: #5e6278;
+  transition: color .2s ease, background-color .2s ease
+}*/
+
+.required:after {
+  content: "*";
+  position: relative;
+  font-size: inherit;
+  color: #f1416c;
+  padding-left: .25rem;
+  font-weight: 700;
+}
+
+.col-input-label {
+  padding-top: calc(.75rem + 1px);
+  padding-bottom: calc(.75rem + 1px);
+  margin-bottom: 0;
+  line-height: 1.5;
+  color: #3f4254;
+  @apply font-semibold
+}
