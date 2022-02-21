@@ -11,7 +11,7 @@ export default <Middleware> async function ({ redirect }) {
   /**
    * redirect if the loggedin user is a user
    */
-  if(authUserStore.isUserCurrentRole){
+  if(authUserStore.isBuyerCurrentRole){
     redirect('/account')
   }
 }
