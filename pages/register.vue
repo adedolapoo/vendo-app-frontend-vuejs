@@ -8,7 +8,7 @@
       </div>
       <p class="text-gray-500 mb-6">
         Already have an account ?
-        <NuxtLink to="/login" class="text-green font-semibold hover:text-blue">Login</NuxtLink>
+        <NuxtLink to="/login" class="text-orange font-semibold hover:text-green">Login</NuxtLink>
       </p>
       <NuxtLink to="/" class="text-gray-500 text-sm text-blue underline">Back Home</NuxtLink>
     </div>

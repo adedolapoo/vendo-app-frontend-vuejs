@@ -14,12 +14,12 @@
         <div class="pt-16">
           <NuxtLink
             to="/login"
-            class="py-4 text-lg font-semibold text-center text-white border-2 rounded  px-12 focus:outline-none bg-green border-green hover:bg-blue hover:border-blue mr-6"
+            class="py-4 text-lg font-semibold text-center text-white border-2 rounded-lg  px-12 focus:outline-none bg-green border-green hover:bg-green/80 mr-6"
           >Login
           </NuxtLink>
           <NuxtLink
             to="/register"
-            class="py-4 text-lg font-semibold text-center text-white border-2 rounded  px-12 focus:outline-none bg-blue border-blue hover:bg-blue hover:border-blue"
+            class="py-4 text-lg font-semibold text-center text-white border-2 rounded-lg  px-12 focus:outline-none bg-orange  border-orange hover:bg-orange/80"
           >Register
           </NuxtLink>
         </div>

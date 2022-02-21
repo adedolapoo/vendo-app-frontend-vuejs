@@ -2,13 +2,11 @@
   <header>
     <div class="max-w-7xl mx-auto px-4 md:px-0">
       <div class="py-5 flex justify-between items-center sticky top-0 px-4 md:px-0">
-        <figure>
-          <img class="w-1/2 md:w-2/3" src="/img/logo.png"/>
-        </figure>
+        <h1 class="text-3xl font-bold text-orange">Vend<span class="text-green">Machine</span></h1>
         <AuthUserWidget/>
       </div>
     </div>
-    <div class="border-t border-[eff2f5]" v-if="!authUserStore.isApplicantCurrentRole">
+    <!--<div class="border-t border-[eff2f5]" v-if="!authUserStore.isBuyerCurrentRole">
       <div class="max-w-7xl mx-auto py-4 flex justify-between">
         <AdminNav />
         <div>
@@ -17,7 +15,7 @@
           </a>
         </div>
       </div>
-    </div>
+    </div>-->
 
   </header>
 </template>

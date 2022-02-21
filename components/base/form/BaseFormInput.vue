@@ -1,18 +1,21 @@
 <template>
   <div>
-    <BaseFormLabel :for="state.uniqueId" v-if="label">{{label}}</BaseFormLabel>
+    <BaseFormLabel :for="uniqueId" v-if="label">{{label}}</BaseFormLabel>
     <input
       :id="uniqueId"
       v-bind="$attrs"
       v-model = "computedValue"
       :placeholder="placeholder || label"
-      class="input input-solid w-full text-[1rem]"
-      :class="{
+      :type = "type"
+      :min = "min"
+      :max = "max"
+      class="input w-full text-[1rem] pl-5 focus:shadow-none focus:border-none focus:ring-gray-200"
+      :class="[customClass,{
                     'border-2 border-red-600': error,
                     'border-2 border-green-600': success,
                     'border-2 border-blue-600': info,
                     'border-2 border-yellow-400': warning,
-                }"
+                }]"
       @blur="$emit('blur', $event)"
       @focus="$emit('focus', $event)"
     />
@@ -47,9 +50,15 @@
       type: String,
       default: ''
     },
+    customClass: {
+      type: String,
+      default: 'input-solid'
+    },
     success: Boolean,
     info: Boolean,
-    warning: Boolean
+    warning: Boolean,
+    min: [String,Number],
+    max: [String,Number],
   });
 
   const emit = defineEmits(['input']);

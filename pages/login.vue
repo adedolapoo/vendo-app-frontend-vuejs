@@ -7,7 +7,7 @@
         <AuthLoginForm />
       </div>
       <p class="text-gray-500 mb-6">
-        Don't have an account ? <NuxtLink to="/register" class="text-green font-semibold">Register</NuxtLink>
+        Don't have an account ? <NuxtLink to="/register" class="text-orange font-semibold">Register</NuxtLink>
       </p>
 
       <NuxtLink to="/" class="text-gray-500 text-sm underline">Back Home</NuxtLink>

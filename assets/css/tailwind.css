@@ -113,3 +113,11 @@
   color: #3f4254;
   @apply font-semibold
 }
+
+.btn-theme{
+  @apply bg-green border-green hover:bg-green/80 hover:border-green;
+}
+
+.form-actions{
+  @apply flex justify-end mt-8
+}

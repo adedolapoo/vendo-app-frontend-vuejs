@@ -13,7 +13,7 @@ export default <Middleware> async function ({ redirect }) {
     /**
      * Redirect if logged in user is not a customer/user
      */
-    if(!authUserStore.isUserCurrentRole){
+    if(!authUserStore.isBuyerCurrentRole){
       redirect('/admin')
     }
 

@@ -1,5 +1,6 @@
 <template>
-  <div id="admin" class="main">
+  <div id="admin" class="main relative">
+    <BaseModal />
     <AdminHeader />
     <section>
       <nuxt />
@@ -8,12 +9,20 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
   export default {
     middleware: ['auth']
   }
 </script>
 
-<script setup>
+<script lang="ts" setup>
+  import { useProductStore } from '~/stores/product';
+
+  const productStore = useProductStore();
+
   usePageMeta('Account')
+
+  onMounted(() => {
+    productStore.getProducts();
+  })
 </script>

@@ -1,21 +1,7 @@
 <template>
   <form>
-    <div class="mb-6">
-      <input
-        class="appearance-none block border-gray-300 w-full text-gray-600 placeholder:text-gray-400 border rounded-full py-3 px-6 mb-3 leading-tight focus:outline-none focus:ring-white"
-        type="text"
-        placeholder="Email Address"
-        v-model="formData.email"
-      >
-    </div>
-    <div class="mb-6">
-      <input
-        class="appearance-none block border-gray-300 w-full text-gray-600 placeholder:text-gray-400 border rounded-full py-3 px-6 mb-3 leading-tight focus:outline-none focus:ring-white"
-        type="password"
-        placeholder="Password"
-        v-model="formData.password"
-      >
-    </div>
+    <BaseFormInput placeholder="Email Address" v-model="formData.email" class="mb-6" />
+    <BaseFormInput type="password" placeholder="Password" v-model="formData.password" class="mb-6" />
     <div class="flex flex-wrap mb-6 justify-between">
       <div class="flex items-center">
         <input
@@ -26,13 +12,13 @@
       </div>
       <NuxtLink
         to="#"
-        class="text-green"
+        class="text-orange"
       >Forgot Password?
       </NuxtLink>
     </div>
 
     <button :class="{'is-loading' : isLoading}"
-            class="relative w-full bg-green mt-4 py-3 px-4 rounded-full text-white text-lg font-semibold hover:bg-green/90 transition-all"
+            class="relative w-full bg-green mt-4 py-3 px-4 rounded-full text-white text-lg font-semibold hover:bg-green/80 transition-all"
             @click.prevent="login">Login
     </button>
   </form>

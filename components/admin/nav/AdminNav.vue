@@ -7,13 +7,13 @@
 <script lang="ts" setup>
   import { computed } from '#app'
   import adminNav from '~/utils/defs/nav/admin';
-  import applicantNav from '~/utils/defs/nav/applicant';
   import { useAuthUserStore } from '~/stores'
 
   const authUserStore = useAuthUserStore()
 
   const items = computed(() => {
-    if(authUserStore.isApplicantRole) return applicantNav
-    return adminNav
+    /*if(!authUserStore.isBuyerCurrentRole) return;
+    return adminNav*/
+    return []
   })
 </script>

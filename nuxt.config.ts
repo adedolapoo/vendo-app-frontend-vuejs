@@ -25,7 +25,7 @@ export default defineNuxtConfig({
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'NPC Attestation Payment Portal',
+    title: 'VendMachine',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -41,6 +41,8 @@ export default defineNuxtConfig({
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/axios',
+    '~/plugins/emitter',
+    '~/plugins/modal',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

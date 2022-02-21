@@ -1,6 +1,8 @@
 <template>
-    <label class="block text-sm font-medium text-label text-gray-800 dark:text-gray-300 truncate">
-        <slot></slot>
+    <label class="label font-semibold">
+        <span class="label-text">
+          <slot></slot>
+        </span>
     </label>
 </template>
 
