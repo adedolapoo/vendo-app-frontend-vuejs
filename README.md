@@ -1,4 +1,4 @@
-## Vending Machine Frontend App Built with VueJs
+## Vending Machine Frontend App Built with VueJs using NuxtJs
 ```bash
 # install dependencies
 $ npm install
